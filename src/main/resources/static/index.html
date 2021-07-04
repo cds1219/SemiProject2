@@ -31,6 +31,7 @@
    </head>
    <!-- body -->
    <body class="main-layout">
+   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
@@ -76,10 +77,10 @@
                         <nav class="main-menu">
                            <ul class="menu-area-main">
                               <li class="active"> <a href="index.html">Home</a> </li>
-                              <li> <a href="about.html">About</a> </li>
-                              <li> <a href="product.html">product</a> </li>
-                              <li> <a href="blog.html"> Blog</a> </li>
-                              <li> <a href="contact.html">Contact</a> </li>
+                              <li> <a href="html/about.html">About</a> </li>
+                              <li> <a href="html/product.html">product</a> </li>
+                              <li> <a href="html/blog.html"> Blog</a> </li>
+                              <li> <a href="html/contact.html">Contact</a> </li>
                               <li class="mean-last"> <a href="#contact">signup</a> </li>
                                
                            </ul>
@@ -87,8 +88,8 @@
                      </div>
                   </div>
                </div>
-               <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-                  <li><a class="buy" href="#">Login</a></li>
+               <div>
+                  <span id="loginSpan">ID<input id="id" size='3'> PW<input id="pw" type="password" size='3'> <button id="loginBtn">로그인</button></span>
                </div>
             </div>
          </div>
@@ -501,6 +502,7 @@
       </footr>
       <!-- end footer -->
       <!-- Javascript files--> 
+      <script src="js/my.js"></script>
       <script src="js/jquery.min.js"></script> 
       <script src="js/popper.min.js"></script> 
       <script src="js/bootstrap.bundle.min.js"></script> 

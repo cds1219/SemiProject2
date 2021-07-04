@@ -5,50 +5,11 @@
    
 <mapper namespace="web.dao.SemiDAO">
 
-	<resultMap id="memResult" type="memberVO">
-      <result property="id" column="id" />
-      <result property="pw" column="pw" />
-      <result property="name" column="name" />
-      <result property="address" column="address" />
-      <result property="age" column="age" />
-	</resultMap> 
- 
- 
-   <select id="selectAllMemberList" resultMap="memResult"   >
-      <![CDATA[
-        select * from member
-      ]]>
-   </select>
-
-   <update id="updateMember"  parameterType="memberVO">
-     <![CDATA[
-	     update member
-	     set pw=#{pw}, name=#{name}, address=#{address}
-	     where
-	     id=#{id}
-      ]]>      
-   </update> 
-     
-   <delete id="deleteMember"  parameterType="String">
-	<![CDATA[
-	   delete from member
-	   where
-	   id=#{id}
-	]]>      
-  </delete>
-  
-  <select id="loginById"  resultType="memberVO"   parameterType="memberVO" >
+  <select id="loginById"  resultType="semiVO"   parameterType="semiVO" >
 	<![CDATA[
 		select * from member	
 		where id=#{id} and pw=#{pw}		
 	]]>
   </select>
-
-	<insert id="insertMember" parameterType="memberVO">
-		<![CDATA[
-			insert into member(id,pw,name)
-			values(#{id},#{pw},#{name})
-		]]>
-	</insert>
 	
 </mapper>
